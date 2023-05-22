@@ -1,0 +1,120 @@
+.stopwatch__container{
+    margin:20px 0px;
+}
+.progress-bar__dot {
+  height: 10px;
+  width: 10px;
+  background-color: #cbd5fd;
+  border-radius: 100%;
+  position: absolute;
+  top: 20px;
+}
+
+.progress-bar__dot:nth-child(2) {
+  translate: 90px 40px;
+}
+.progress-bar__dot:nth-child(3) {
+  translate: 125px 125px;
+}
+.progress-bar__dot:nth-child(4) {
+  translate: 90px 215px;
+}
+.progress-bar__dot:nth-child(5) {
+  translate: 0px 250px;
+}
+.progress-bar__dot:nth-child(6) {
+  translate: -90px 215px;
+}
+.progress-bar__dot:nth-child(7) {
+  translate: -125px 125px;
+}
+.progress-bar__dot:nth-child(8) {
+  translate: -90px 40px;
+}
+
+.stopwatch__decorative.wide {
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  border: 3px solid #cbd5fd;
+  top: -30px;
+  border-bottom: 0px;
+}
+
+.stopwatch__decorative.small {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  border: 3px solid #cbd5fd;
+  top: -30px;
+  border-bottom: 0px;
+  transform: rotate(45deg);
+  translate: 130px 60px;
+}
+
+.stopWatch__control_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+}
+.stopwatch__button_start,
+.stopwatch__button_reset {
+  width: 100px;
+  text-align: center;
+  font-size: 10px;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  transition: all .25s;
+  height: 30px;
+}
+
+.stopwatch__button_start{
+    background-color: #4cd95b;
+}
+
+.stopwatch__button_reset {
+    background-color: #f15171;
+}
+
+.stopwatch__button_start:hover,
+.stopwatch__button_reset:hover,
+.stopwatch__button_start:active,
+.stopwatch__button_reset:active{
+    border: none;
+    font-size: 12px;
+}
+
+.stopwatch_laps__container{
+    margin : 40px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.stopwatch__laps{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    color : var(--main-light);
+    background-color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.stopwatch__laps span{
+    display: inline-block;
+    margin-left : 4px;
+    cursor: pointer;
+}
+
+.stopwatch__button_save{
+    position: relative;
+    top:50px;
+    background-color:  var(--main-light);
+}
