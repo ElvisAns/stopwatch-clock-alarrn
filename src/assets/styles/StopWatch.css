@@ -1,5 +1,10 @@
 .stopwatch__container{
     margin:20px 0px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .progress-bar__dot {
   height: 10px;
@@ -117,4 +122,7 @@
     position: relative;
     top:50px;
     background-color:  var(--main-light);
+    color:white;
+    text-transform: uppercase;
+    font-size: 12px;
 }
