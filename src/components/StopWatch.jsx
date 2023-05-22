@@ -96,10 +96,7 @@ function getInitialLaps() {
         return JSON.parse(savedLapsList)
     }
     else return {
-        list: [{
-            name: 'Elvis',
-            value: 'Ansima'
-        }]
+        list: []
     };
 }
 const StopWatch = () => {
