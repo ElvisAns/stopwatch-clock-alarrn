@@ -82,6 +82,7 @@
 
 .stopwatch__button_reset {
     background-color: #f15171;
+    color:white;
 }
 
 .stopwatch__button_start:hover,
