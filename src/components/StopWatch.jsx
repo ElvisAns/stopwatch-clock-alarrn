@@ -35,6 +35,7 @@ const reducer = (currentState, action) => {
 
         case 'toggleStopWatchState': {
             const { stopWatchRunning } = currentState;
+            window.localStorage.setItem('timer', JSON.stringify({ ...currentState, stopWatchRunning: !stopWatchRunning }))
             return { ...currentState, stopWatchRunning: !stopWatchRunning }
         }
 
