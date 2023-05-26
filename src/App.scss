@@ -1,0 +1,67 @@
+$color_1: var(--main-light-text);
+$color_2: var(--secondary-light-text-fade);
+$color_3: white;
+$font-family_1: 'Avenir Next Cyr Medium', sans-serif;
+$background-color_1: var(--main-light-bg);
+$background-color_2: var(--main-light);
+
+@import "https://fonts.cdnfonts.com/css/avenir-next-cyr";
+:root {
+	--main-light: #546cf6;
+	--main-dark: #333;
+	--main-light-bg: #f1f1f1;
+	--main-dark-bg: var(--main-dark);
+	--main-light-text: #333;
+	--secondary-light-text-fade: #8d8b8b;
+	--main-dark-text: #fff;
+}
+html {
+	min-height: 100vh;
+	background-color: $background-color_1;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	color: $color_1;
+	font-family: $font-family_1;
+}
+body {
+	min-height: 100vh;
+	background-color: $background-color_1;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	color: $color_1;
+	font-family: $font-family_1;
+}
+#root {
+	min-width: 320px;
+	height: 100%;
+}
+.home__main_menu {
+	display: flex;
+	gap: 30px;
+	padding: 20px 0px;
+	width: 100%;
+	justify-content: space-between;
+}
+.home__menu_link {
+	color: $color_2;
+	font-size: 12px;
+	padding: 10px;
+	border-radius: 20px;
+	&:hover {
+		background-color: $background-color_2;
+		color: $color_3;
+	}
+}
+.home__menu_link.active {
+	background-color: $background-color_2;
+	color: $color_3;
+}
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+    padding:20px 0px;
+}

@@ -1,6 +1,6 @@
 .stopwatch__container{
     margin:20px 0px;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
