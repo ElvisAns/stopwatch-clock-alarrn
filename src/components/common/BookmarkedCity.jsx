@@ -5,12 +5,12 @@ export default function BookmarkedCity({ meta }) {
         <>
             {meta.map((info, index) => (
                 <div key={index} className='single_bookmark'>
-                    <div>
+                    <div style={{textAlign:"left"}}>
                         <div className='capital'>{info.capital}</div>
                         <div className='country'>{info.country}</div>
                         <div className='tz'>{info.tzOffset}</div>
                     </div>
-                    <div>
+                    <div style={{textAlign:"right"}}>
                         <div className='time'>{dateTime(info.timezone,"time")}</div>
                         <div className='date'>{dateTime(info.timezone,"date")}</div>
                     </div>

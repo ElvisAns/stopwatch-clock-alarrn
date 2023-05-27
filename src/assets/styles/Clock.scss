@@ -53,7 +53,7 @@
 
     .clock__user_bookmark {
         background-color: white;
-        width:auto;
+        width: 100%;
         border-radius: 50px 50px 0px 0px;
         margin-top : 20px;
         .single_bookmark {
@@ -64,15 +64,6 @@
             font-size: 12px;
             padding-bottom: 6px;
             align-items: center;
-
-            
-            div:nth-child(1) {
-                text-align: left;
-            }
-
-            div:nth-child(2) {
-                text-align: right;
-            }
 
             .capital,
             .time {

@@ -45,6 +45,8 @@ body {
 	justify-content: space-between;
 }
 .home__menu_link {
+	width : calc(80%/3);
+	text-align: center;
 	color: $color_2;
 	font-size: 12px;
 	padding: 10px;
