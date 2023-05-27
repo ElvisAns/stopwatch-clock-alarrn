@@ -101,7 +101,7 @@ function getInitialLaps() {
     };
 }
 const StopWatch = () => {
-    const [timer, updateTimer] = useReducer(reducer, {
+    const [timer, updateTimerDispatcher] = useReducer(reducer, {
         seconds: 0,
         minutes: 0,
         hours: 0,
@@ -133,7 +133,7 @@ const StopWatch = () => {
         let intervalId;
         if (timer.stopWatchRunning) {
             intervalId = setInterval(() => {
-                updateTimer({ type: 'tick' })
+                updateTimerDispatcher({ type: 'tick' })
             }, 1000);
         }
         return () => {
@@ -170,8 +170,8 @@ const StopWatch = () => {
 
 
             <div className='stopWatch__control_buttons'>
-                <button className='stopwatch__button_start' onClick={() => updateTimer({ type: 'toggleStopWatchState' })}>{timer.stopWatchRunning ? 'Pause' : timerInitialized() ? 'Continue' : 'Start'}</button>
-                <button className='stopwatch__button_reset' onClick={() => updateTimer({ type: 'reset' })}>Reset</button>
+                <button className='stopwatch__button_start' onClick={() => updateTimerDispatcher({ type: 'toggleStopWatchState' })}>{timer.stopWatchRunning ? 'Pause' : timerInitialized() ? 'Continue' : 'Start'}</button>
+                <button className='stopwatch__button_reset' onClick={() => updateTimerDispatcher({ type: 'reset' })}>Reset</button>
             </div>
         </div>
     )

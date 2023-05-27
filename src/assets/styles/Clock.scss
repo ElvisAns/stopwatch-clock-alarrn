@@ -1,0 +1,76 @@
+.clock__map_container {
+    width: 100%;
+    height: 100%;
+
+    .clock__vector_map {
+        background-color: transparent;
+    }
+
+    svg {
+        stroke: #fafafa;
+
+        // All layers are just path elements
+        path {
+            fill: var(--secondary-light-text-fade);
+            cursor: pointer;
+            outline: none;
+
+            // When a layer is hovered
+            &:hover {
+                fill: var(--main-light);
+            }
+
+            // When a layer is focused.
+            //&:focus {
+            //    fill: var(--main-light);
+            //}
+
+            // When a layer is 'checked' (via checkedLayers prop).
+            &[aria-checked='true'] {
+                fill: var(--main-light);
+            }
+
+            // When a layer is 'selected' (via currentLayers prop).
+            &[aria-current='true'] {
+                fill: var(--main-light);
+            }
+        }
+    }
+
+    .clock__user_local{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+        font-size: 12px;
+        .clock_user_local_time{
+            font-size: 18px;
+            font-weight: 900;
+        }
+    }
+
+    .clock__user_bookmark{
+        background-color: white;
+        width: 100%;
+        padding : 20px;
+        border-radius: 50px 50px 0px 0px;
+        .single_bookmark{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            font-size: 12px;
+            padding-bottom: 6px;
+            align-items: center;
+            .capital, .time{
+                font-weight: 900;
+                font-size: 14px;
+            }
+            .country,.date{
+                font-size: 10px;
+                font-weight: 100;
+            }
+        }
+    }
+}
