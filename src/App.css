@@ -23,6 +23,7 @@ body {
 #root {
   min-width: 320px;
   height: 100%;
+  width: 100%;
 }
 
 .home__main_menu {

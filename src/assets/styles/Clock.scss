@@ -37,37 +37,46 @@
         }
     }
 
-    .clock__user_local{
+    .clock__user_local {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
         align-items: center;
-        padding: 20px;
         font-size: 12px;
-        .clock_user_local_time{
+
+        .clock_user_local_time {
             font-size: 18px;
             font-weight: 900;
         }
     }
 
-    .clock__user_bookmark{
+    .clock__user_bookmark {
         background-color: white;
-        width: 100%;
-        padding : 20px;
+        width:auto;
         border-radius: 50px 50px 0px 0px;
-        .single_bookmark{
+        margin-top : 20px;
+        .single_bookmark {
+            padding: 20px;
             display: flex;
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-evenly;
             font-size: 12px;
             padding-bottom: 6px;
             align-items: center;
-            .capital, .time{
+
+            div:nth-child(2) {
+                text-align: right;
+            }
+
+            .capital,
+            .time {
                 font-weight: 900;
                 font-size: 14px;
             }
-            .country,.date{
+
+            .country,
+            .date {
                 font-size: 10px;
                 font-weight: 100;
             }
