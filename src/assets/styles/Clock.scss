@@ -57,14 +57,16 @@
         border-radius: 50px 50px 0px 0px;
         margin-top : 20px;
         .single_bookmark {
-            padding: 20px;
             display: flex;
             width: 100%;
-            justify-content: space-evenly;
+            justify-content: space-between;
             font-size: 12px;
             padding-bottom: 6px;
             align-items: center;
-
+            border-bottom: 1px solid rgba(164, 158, 158, 0.509);
+            >div{
+                padding: 20px 30px 10px 30px;
+            }
             .capital,
             .time {
                 font-weight: 900;

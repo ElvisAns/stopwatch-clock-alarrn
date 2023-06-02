@@ -36,6 +36,9 @@ body {
 #root {
 	min-width: 320px;
 	height: 100%;
+	@media screen and (width<420px){
+		width : 100%;
+	}
 }
 .home__main_menu {
 	display: flex;
