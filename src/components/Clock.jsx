@@ -124,6 +124,7 @@ const Clock = () => {
         <div className="clock__map_container">
             <VectorMap className='clock__vector_map' {...wordMap} layerProps={layerProps} currentLayers={selectedArea} />
             <div className='clock__user_local'>
+            <span style={{textAlign:'center',width:'80%',paddingBottom:'15px'}}>please click on any country on the map &#x2191; to add/remove it to the clock list</span>
                 <div className='clock_user_local_location'>{userLocalTimeDate.userCity}</div>
                 <div className='clock_user_local_time'>{userLocalTimeDate.time}</div>
                 <div className='clock_user_local_date'>{userLocalTimeDate.date}</div>
