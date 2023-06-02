@@ -20,14 +20,14 @@ function location_reducer(state, action) {
             tzOffset: action.payload.tzOffset
         }]
         localStorage.setItem('locations', JSON.stringify(locations))
-        toast.info(`Success, you have added ${action.payload.country} to your bookmark`)
+        toast.info(`Success, you have added ${action.payload.country} to your bookmark`, { theme: 'dark' , bodyClassName: "toast-small-fs",})
         return locations;
     }
 
     if (action.type == "remove location") {
         const locations = state.filter((v) => v.mapid != action.payload.id)
         localStorage.setItem('locations', JSON.stringify(locations))
-        toast.info(`Country ${action.payload.country} removed from your list`);
+        toast.info(`Country ${action.payload.country} removed from your list`, { theme: 'dark' , bodyClassName: "toast-small-fs",});
         return locations
     }
 
@@ -63,7 +63,7 @@ const Clock = () => {
             const existing = locations.find(location => location.mapid == target.attributes.id.value)
             if (!existing) {
                 try {
-                    toast.info("Please hold on we are setting up country infos");
+                    toast.info("Please hold on we are setting up country infos", { theme: 'dark' , bodyClassName: "toast-small-fs",});
                     const countryInfos = await axios.get(`https://restcountries.com/v3.1/name/${target.attributes.name.value}?fullText=true`)
                     const capital = countryInfos.data[0].capital[0];
                     const city_info = await axios.get(`https://api.api-ninjas.com/v1/worldtime?city=${capital}`, {
@@ -92,7 +92,7 @@ const Clock = () => {
                     })
                 }
                 catch (e) {
-                    toast.warning("Something went wrong, please try again! wait...are you online?");
+                    toast.warning("Something went wrong, please try again! wait...are you online?", { theme: 'dark' , bodyClassName: "toast-small-fs",});
                 }
 
             }
@@ -124,7 +124,7 @@ const Clock = () => {
         <div className="clock__map_container">
             <VectorMap className='clock__vector_map' {...wordMap} layerProps={layerProps} currentLayers={selectedArea} />
             <div className='clock__user_local'>
-            <span style={{textAlign:'center',width:'80%',paddingBottom:'15px'}}>please click on any country on the map &#x2191; to add/remove it to the clock list</span>
+                <span style={{ textAlign: 'center', width: '80%', paddingBottom: '15px' }}>please click on any country on the map &#x2191; to add/remove it to the clock list</span>
                 <div className='clock_user_local_location'>{userLocalTimeDate.userCity}</div>
                 <div className='clock_user_local_time'>{userLocalTimeDate.time}</div>
                 <div className='clock_user_local_date'>{userLocalTimeDate.date}</div>
